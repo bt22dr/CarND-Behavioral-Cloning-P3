@@ -59,12 +59,12 @@ from keras.layers import Flatten, Dense, Lambda, Cropping2D, Convolution2D, MaxP
 model = Sequential()
 model.add(Lambda(lambda x: (x / 255.0) - 0.5, input_shape=(160,320,3)))
 model.add(Cropping2D(cropping=((70,25), (0,0))))
-'''
-model.add(Convolution2D(3, 5, 5))
-model.add(MaxPooling2D())
-model.add(Dropout(0.5))
-model.add(Activation('relu'))
-'''
+
+#model.add(Convolution2D(3, 5, 5))
+#model.add(MaxPooling2D())
+#model.add(Dropout(0.5))
+#model.add(Activation('relu'))
+
 model.add(Convolution2D(24, 5, 5))
 model.add(MaxPooling2D())
 #model.add(Dropout(0.5))
